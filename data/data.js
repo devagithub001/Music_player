@@ -1,9 +1,11 @@
 export const data = [
-  { id: 1,
+  {
+    id: 1,
     file_location: "./songs/bad_guy_Y2bs.Com.mp3",
     title: "Bad guy",
     artist: "Billie eilish",
-    thumbnail: "./thumbnail/badguy.jpeg" },
+    thumbnail: "./thumbnail/badguy.jpeg"
+  },
   { id: 2, file_location: "./songs/Un_Mela_Aasadhaan_Y2bs.Com.mp3", title: "Un mela aasathan", artist: "Dhanush", thumbnail: "./thumbnail/aayirathil oruvan.webp" },
   { id: 3, file_location: "./songs/lovely_Y2bs.Com.mp3", title: "Lovely", artist: "Billie eilish", thumbnail: "./thumbnail/billieeillsh_lovely.jpg" },
   { id: 4, file_location: "./songs/Lil_Nas_X_-_MONTERO_Call_Me_By_Your_Name__(Naijay.com).mp3", title: "Call me by your name", artist: "Lil Nas X", thumbnail: "./thumbnail/callmebyyourname.jpg" },
@@ -25,7 +27,7 @@ export const data = [
   { id: 20, file_location: "./songs/Macha_Kannai_Y2bs.Com.mp3", title: "Machakanni pathikichi", artist: "Vijay Antony", thumbnail: "./thumbnail/machakanni.jpg" },
   { id: 21, file_location: "./songs/Mi_Gente_Y2bs.Com.mp3", title: "Mi Gente", artist: "J Balvin", thumbnail: "./thumbnail/mi_gente.jpg" },
   { id: 22, file_location: "./songs/Moonlight_Y2bs.Com.mp3", title: "Moonlight", artist: "xxxTentacion", thumbnail: "./thumbnail/moonlight.jpg" },
-  { id: 23, file_location: "https://github.com/devagithub001/Music_player/blob/main/data/songs/%E3%80%90imase%E3%80%91NIGHT%20DANCER%EF%BC%88MV%EF%BC%89.mp3", title: "Night dancer", artist: "Imase", thumbnail: "./thumbnail/nightdancer.jpg" },
+  { id: 23, file_location: "./songs/【imase】NIGHT DANCER（MV）.mp3", title: "Night dancer", artist: "Imase", thumbnail: "./thumbnail/nightdancer.jpg" },
   { id: 24, file_location: "./songs/Padichi_Parthen_(From__Polladhavan_)_Y2bs.Com.mp3", title: "Padichi parthen", artist: "Shankar Mahadevan", thumbnail: "./thumbnail/padichi pathen.jpeg" },
   { id: 25, file_location: "./songs/Porkkalam_(Tamil_Rap)_Y2bs.Com.mp3", title: "Porkalam", artist: "Yogi B", thumbnail: "./thumbnail/porkalam.jpg" },
   { id: 26, file_location: "./songs/Pottu_Thakku_Y2bs.Com.mp3", title: "Potu thakku", artist: "srikanth Deva", thumbnail: "./thumbnail/potu thakku.jpg" },
@@ -36,4 +38,20 @@ export const data = [
   { id: 31, file_location: "./songs/Venmegam_Y2bs.Com.mp3", title: "Venmegam", artist: "Hariharan", thumbnail: "./thumbnail/venmegam.jpeg" },
   { id: 32, file_location: "./songs/Beggin'_Y2bs.Com.mp3", title: "Beggin", artist: "Måneskin", thumbnail: "./thumbnail/beggin.jpg" },
 
+];
+
+
+export const userData = [
+  {
+    id: 1,
+    name:'jaga',
+    email: 'jaga@gmail.com',
+    password: 'jagadeesh'
+  },
+  {
+    id: 2,
+    name: 'deva',
+    email: 'deva@gmail.com',
+    password: 'deva'
+  },
 ];
