@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login djc Player</title>
+
+    <!-- linking css files to html -->
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-main" id="jaga">
+            <div >
+
+                <img class="logo" src="../data/djc_logo.jpg" alt="music-logo" 
+                width="60px"
+                height="60px">
+                
+                <h2 >Welcome back <br><span class="title-name">to DJC music player</span></h2>
+                <p class="log-text">Login into your account to listen music</p>
+                
+                <form  class="login-form-style" id="js-login-form">
+                    <Label for="email">Email</Label>
+                    <input type="email" 
+                    placeholder="Enter email" name="email" class="logemail" pattern="[^ @]*@[^ @]*" required>
+                    <Label for="password">Password</Label>
+                    <input type="password" 
+                    placeholder="Enter password" class="logpass" name="password" required>
+                    <div class="check-list">
+                        <label for="Remember">
+                            <input type="checkbox" class="tick-box" name="Remember" id="login-checkbox" >
+                            Remember me
+    
+                        </label>
+                        
+                        <a href="#">Forgot your password?</a>
+                    </div> 
+                    <button type="submit" class="sign-in" >Sign in</button>   
+                    <p class="error-msg"></p>   
+                    <p>Don't have an account? <a href="./register.html">Create here</a></p>          
+                    
+                </form>
+                <p class="Copyright">Copyright by DJC 2024.All Rights Reserved</p>
+            </div>
+            </div>
+        <div class="login-image">
+            <img src="../data/ref-image.jpg" alt="">
+        </div>
+    </div>
+    
+
+    <script type="module" src="../script/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Audio Cutter</title>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom,rgb(179, 5, 5),rgb(99, 0, 0),rgb(48, 0, 0),rgb(26, 0, 0),rgb(0, 0, 0),black);
+}
+.container{
+  display: flex;
+  flex-direction: column;justify-content: center;
+  align-items: center;
+}
+.controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+
+
+} 
+.controls div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls label {
+  margin-right: 10px;
+  color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.controls input[type="number"] {
+  width: 60px;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+}
+
+.controls button {
+  margin-left: 10px;
+}
+h1{
+  color: whitesmoke;
+  
+}
+
+canvas {
+  min-width: 300px;
+  width: 600px;
+  max-width: 80%;
+  margin: 20px auto;
+  border: 1px solid #cccccc7e;
+  height: 150px;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+button{
+  border-radius: 25px;
+  padding:10px 20px;
+  border: none;
+  color: black;
+  transition: all 10ms;
+}
+button:hover{
+  border-radius: 10px;
+  background-color: rgb(255, 205, 202);
+}
+button:active{
+  border-radius: 10px;
+  background-color: rgb(255, 96, 88);
+  color:white
+}
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Advanced Audio Cutter</h1>
+    <canvas id="waveformCanvas"></canvas>
+    <div class="controls">
+      <div>
+
+        <label for="startTime">Start Time:
+
+          <input type="number" id="startTime" value="0" min="0" step="1">
+        </label>
+        <label for="endTime">End Time:
+
+          <input type="number" id="endTime" value="10" min="0" step="1">
+        </label>
+      </div>
+      <div>
+
+        <button class="downloadbtn">play and Download Audio</button>
+        <button class="downloadbtn2">Trim and Download Audio</button>
+      
+      </div>
+    </div>
+  </div>
+<script type="module" src="../script/script.js"></script>
+</body>
+</html>

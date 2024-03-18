@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register djc Player</title>
+
+    <!-- linking css files to html -->
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+    <div class="login-container register-container">
+        <div class="login-main" id="jaga">
+            <div >
+
+                <img class="logo" src="../data/djc_logo.jpg" alt="music-logo" 
+                width="60px"
+                height="60px">
+                <!-- <div class="object-j">
+                    <img src="images/icons8-airpods-3-96.png" alt="apple-earphone">
+                </div> -->
+                <h2 >Welcome <br><span class="title-name">to DJC music player</span></h2>
+                <p class="log-text">Register your account to listen music</p>
+                <form  class="login-form-style" id="js-register-form">
+                    <Label for="name">Name</Label>
+                    <input type="text" 
+                    placeholder="Enter your name" name="name" class="username"  required>
+                    <Label for="email">Email</Label>
+                    <input type="email" 
+                    placeholder="Enter your email" name="email" class="useremail" pattern="[^ @]*@[^ @]*" required>
+                    <Label for="password">Password</Label>
+                    <input type="password" 
+                    placeholder="Enter new password" class="userpass" name="password" required>
+                    <div class="check-list">
+                        <label for="Remember">
+                            <input type="checkbox" class="tick-box" name="Remember" id="login-checkbox" required>
+                            You agree to our <a href="#">Terms of Service & Privacy Policy</a>
+    
+                        </label>
+                        
+                    </div> 
+                    <button type="submit" class="sign-in" value="submit">Register</button>      
+                    <p class="error-msg"></p> 
+                    <p>Already have an account? <a href="./login.html">sign in</a></p>          
+                    
+                </form>
+                <p class="Copyright">Copyright by DJC 2024.All Rights Reserved</p>
+            </div>
+            </div>
+        <div class="login-image">
+            <img src="../data/ref-image.jpg" alt="">
+        </div>
+    </div>
+    
+
+    <script type="module" src="../script/register.js"></script>
+</body>
+</html>
