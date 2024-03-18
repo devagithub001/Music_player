@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Protest+Riot&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+
+
+:root{
+    --font1: 'Inter', sans-serif;
+    --font2: 'Poppins', sans-serif;
+    --font3: 'Protest Riot', sans-serif;
+    
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font2);
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    background: linear-gradient(-45deg, #ee765257, #f085ae, #63bedf, #3ed0ae90);
+     background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;height: 100vh;
+    
+}
+@keyframes gradient { 
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 0% 50%;
+    }
+    75% {
+        background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+a{
+    text-decoration: none;
+}
+input{
+    border-radius: 25px;
+    padding: 18px 20px;
+    
+}
+.error-msg{
+    margin: 0;
+    padding: 0;
+    text-indent: 10px;
+    color: red;
+}
+
+.login-container{
+    width: 70vw;
+    height: 70vh;
+    height: auto;
+    margin :2em 6em;
+    background-color: white;
+    border-radius: 60px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+
+}
+.register-container{
+    max-height: 85vh;
+}
+.login-main{
+    flex-basis: 50%;
+    height:80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 3rem;
+
+    
+    
+}
+
+.logo{
+    border-radius: 10px;
+
+}
+
+.login-main h2{
+    font-family: 'Honk', system-ui;
+    color: rgb(89, 89, 89);
+    margin-bottom: 2px;
+    font-size: 40px;
+}
+
+
+
+.login-main h2 .title-name{
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.882);
+    font-family: var(--font3);
+    
+}
+.log-text {
+    font-size: 14px;
+    color: grey;
+    
+}
+.login-form-style {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    
+}
+.login-form-style input{
+    border: 1.6px solid purple;
+    max-width: 20em;
+    margin-bottom: 10px;
+}
+.login-form-style input::placeholder{
+    font-family:var(--font2);
+    color: rgb(201, 201, 202);
+}
+.check-list {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    display:flex;
+    align-items: center;
+    max-width: 23em;
+    justify-content: space-between;
+    font-size: 14px;
+
+}
+#login-checkbox {
+    padding: 0;
+    align-self: flex-start;
+    margin-bottom: 2px;
+    margin: 6px;
+}   
+
+.sign-in {
+    border-radius: 30px;
+    padding: 13px ;
+    background-color: rgb(103, 59, 232);
+    color: white;
+    font-size: medium;
+    font-family: var(--font2);
+    border: none;
+    max-width: 19.5em;
+}
+.Copyright {
+    font-size: 12px;
+    color: grey;
+    margin-top:5em;
+
+
+}
+.login-image{
+    flex-basis: 50%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.login-image img{
+    width:100%;
+    max-width: 600px;
+    border-radius: 50px;
+    box-shadow: rgba(46, 72, 240, 0.4) 5px 5px, rgba(85, 75, 199, 0.3) 10px 10px, rgba(101, 112, 172, 0.2) 15px 15px, rgba(114, 115, 142, 0.1) 20px 20px, rgba(113, 112, 126, 0.05) 25px 25px;
+}
+
+
+
+
+/* sdfjlsfj */
+
+@media screen and (max-width:600px){
+    .login-image{
+        display: none;
+    }
+    
+    .login-image img{
+        display: none;}
+    .login-main h2{
+        
+        font-size: 24px;
+    }
+    .login-container{
+        width: 80%;
+        height: 80%;
+        height: auto;
+        margin :2em 6em;
+        background-color: white;
+        border-radius: 60px;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+    
+    }
+    .Copyright {
+        
+        margin-top:2em;
+    
+    }
+    
+    
+    
+    
+}
+@media screen and (max-width:978px){
+    .login-image{
+        display: none;
+    }
+    
+    .login-image img{
+        display: none;}
+        .Copyright {
+        
+            margin-top:2em;
+        
+        }
+        
+}
