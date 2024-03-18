@@ -8,8 +8,8 @@
   <title>DJC player</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="icon" href="./data/djc_logo.jpg">
   <!-- <script src="./dropdown.js" defer></script> -->
 
 </head>
@@ -27,7 +27,7 @@
         <!-- Start of logo -->
 
         <a href="#" class="d-flex px-4">
-          <img src="" alt="" width="40px" height="40px">
+          <img src="../data/djc_logo.jpg" alt="" width="40px" height="40px">
           <span class="fw-semibold ms-2" style="font-size: 1.5em;">DJC Player</span>
         </a>
 
@@ -65,7 +65,7 @@
 
 
         <!-- Start of Install App Button-->
-        <a href="login.html" id="installApp" class="d-block px-4 py-2">
+        <a href="./pages/login.html" id="installApp" class="d-block px-4 py-2">
           Log Out
         </a>
 
@@ -87,22 +87,22 @@
 
             <!-- Start of user profile -->
             <div class="dropdown ms-3" id="user_bttn">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="imgUsuario bg-secondary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    viewBox="0 0 16 16">
-                    <path
-                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                  </svg>
-                </div>
-                kumar
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1">
+                  <div class="imgUsuario bg-secondary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          viewBox="0 0 16 16">
+                          <path
+                              d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                      </svg>
+                  </div>
+                  <span class="username">kumar</span>
               </button>
-              <div class="dropdownMenuButton1-dropContent">
-                <a href="./login.html">Log Out</a>
-              </div>
-
-            </div>
+              <ul class="dropdown-menu" id="dropdownMenuContent" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="./pages/login.html">Log Out</a></li>
+              </ul>
+          </div>
+          
+            
           </div>
         </nav>
 
@@ -120,70 +120,7 @@
             <!-- end of greeting -->
 
             <!-- recent playlists -->
-            <ul id="playlistsRecentes" class="mb-5 ">
-              <li>
-                <img src="./assets/1.jpeg" :alt="playlist.nome">
-                <span class="fw-semibold ms-3 me-auto">sleep deprived</span>
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-              </li>
 
-              <li>
-                <img src="./assets/2.jpeg" :alt="playlist.nome">
-                <span class="fw-semibold ms-3 me-auto">adrenaline rush</span>
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-              </li>
-
-              <li>
-                <img src="./assets/3.jpeg" :alt="playlist.nome">
-                <span class="fw-semibold ms-3 me-auto">impulse</span>
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-              </li>
-
-              <li>
-                <img src="./assets/4.jpeg" :alt="playlist.nome">
-                <span class="fw-semibold ms-3 me-auto">sixth gear</span>
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-              </li>
-
-              <li>
-                <img src="./assets/5.jpeg" :alt="playlist.nome">
-                <span class="fw-semibold ms-3 me-auto">3:14 am</span>
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-              </li>
-
-
-              <li>
-                <img src="./assets/6.jpeg" :alt="playlist.nome">
-                <span class="fw-semibold ms-3 me-auto">serenity</span>
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-
-              </li>
-
-            </ul>
           </section>
 
 
@@ -191,75 +128,11 @@
           <!-- Your top mixes -->
           <section class="feedPlaylist">
             <h4 class="mb-3"><a href="#"><b>Your top mixes</b></a></h4>
-            <a class="see-all" href="#">SEE-ALL</a>
+
             <br>
             <br>
             <ul class="playlists " id="playsongslist">
-              <li>
-                <img src="./assets/7.jpeg">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-                <span>Pop Mix</span>
-                <p><br>SHY Martin, Lauv, Sia and more</p>
-              </li>
-
-              <li>
-                <img src="./assets/8.jpeg">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-                <span>Chill Mix</span>
-                <p><br>Lauv, Oh Wonder, The Chainsmokers and more</p>
-              </li>
-
-              <li>
-                <img src="./assets/9.jpeg">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-                <span>Moody Mix</span>
-                <p><br>Charlie Puth, Oh Wonder, Alec Benjamin and more</p>
-              </li>
-
-              <li>
-                <img src="./assets/10.jpeg">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-                <span>Latin Mix</span>
-                <p><br>Timothy Infinite, Shakira and more</p>
-              </li>
-
-              <li>
-                <img src="./assets/11.jpeg">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-                <span>Hindi Mix</span>
-                <p><br>Ritviz, Nuclea, Atif Aslam and more</p>
-              </li>
-
-              <li>
-                <img src="./assets/12.jpeg">
-                <button type="button" class="btn me-3"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path
-                      d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
-                    </path>
-                  </svg></button>
-                <span>2010s Mix</span>
-                <p><br>The Fat Rat, Alan Walker, The Chainsmokers and more</p>
-              </li>
+              <p style="text-align: center;">please wait! song are fetching...</p>
             </ul>
           </section>
 
@@ -274,7 +147,17 @@
     </div>
 
     <div id="mobiPlay">
-      <button type="button" id="mobibtn"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
+      <div id="musicaPlay" style=" margin-left: 1rem; width: fit-content;"
+        class="d-flex gap-2 align-items-center justify-content-start musicshow1">
+        <div class="song-img"><img style="object-fit: fill; border-radius: 5px;"
+            src="./data/thumbnail/aayirathil oruvan.webp" alt="song-img" width="40px" height="40px"></div>
+        <div class="song-details d-flex flex-column">
+          <p class="m-0  p-0 text-white ">Un mela aasathan</p>
+          <p class="m-0 p-0 text-white" style="opacity: 0.6;">Dhanush</p>
+        </div>
+      </div>
+      <button type="button" id="playPauseButton2" class="mobibtn"><svg role="img" height="24" width="24"
+          viewBox="0 0 24 24" id="playPauseIcon2">
           <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z">
           </path>
         </svg></button>
@@ -282,7 +165,15 @@
     <div id="footer">
       <div id="audioBar" class="p-3 d-flex justify-content-between">
 
-        <div id="musicaPlay"></div>
+        <div id="musicaPlay" style="margin-left: 1rem; width: fit-content;"
+          class="d-flex gap-2 align-items-center justify-content-start musicshow2">
+          <div class="song-img"><img style="object-fit: fill; border-radius: 5px;"
+              src="./data/thumbnail/aayirathil oruvan.webp" alt="song-img" width="40px" height="40px"></div>
+          <div class="song-details d-flex flex-column">
+            <p class="m-0  p-0 text-white ">Un mela aasathan</p>
+            <p class="m-0 p-0 text-white" style="opacity: 0.6;">Dhanush</p>
+          </div>
+        </div>
 
         <div id="botomIcon">
           <ul class="nav flex-row px-2 my-4">
@@ -339,9 +230,9 @@
                   d="M12.7 1a.7.7 0 00-.7.7v5.15L2.05 1.107A.7.7 0 001 1.712v12.575a.7.7 0 001.05.607L12 9.149V14.3a.7.7 0 00.7.7h1.6a.7.7 0 00.7-.7V1.7a.7.7 0 00-.7-.7h-1.6z">
                 </path>
               </svg></button>
-            
-            <a type="button" class="icones repetir download-link" download><svg xmlns="http://www.w3.org/2000/svg" width="20"
-                height="20" viewBox="0 0 192 192" fill="none">
+
+            <a type="button" class="icones repetir download-link" download><svg xmlns="http://www.w3.org/2000/svg"
+                width="20" height="20" viewBox="0 0 192 192" fill="none">
 
                 <g stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"
                   clip-path="url(#a)">
@@ -361,6 +252,32 @@
                 </defs>
 
               </svg></a>
+            <div>
+              <a type="button" class="icones cutlink" style="margin-left: 10px; "><svg
+                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                  height="24px" viewBox="0 -0.5 21 21" version="1.1">
+
+                  <g id="Free-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <g transform="translate(-229.000000, -526.000000)" id="Group" stroke="#ffffff " stroke-width="2">
+                      <g transform="translate(227.000000, 524.000000)" id="Shape">
+                        <path
+                          d="M7.02736429,5 L5.02736429,5 C3.92279479,5 3.02736429,5.8954305 3.02736429,7 L3.02736429,17 C3.02736429,18.1045695 3.92279479,19 5.02736429,19 L7.02736429,19 L7.02736429,19">
+
+                        </path>
+                        <path
+                          d="M17.0273643,5 L19.0273643,5 C20.1319338,5 21.0273643,5.8954305 21.0273643,7 L21.0273643,17 C21.0273643,18.1045695 20.1319338,19 19.0273643,19 L17.0273643,19 L17.0273643,19">
+
+                        </path>
+                        <line x1="12" y1="3" x2="12" y2="21">
+
+                        </line>
+                      </g>
+                    </g>
+                  </g>
+                </svg></a>
+            </div>
+
           </div>
 
           <div id="barraDeProgresso "><small id="currentTime" class="current-time">00:00</small>
@@ -395,7 +312,7 @@
     </div>
   </div>
 
-  <script type="module" src="./songs.js"></script>
+  <script type="module" src="./script/songs.js"></script>
 
 </body>
 
