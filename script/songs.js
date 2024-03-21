@@ -1,4 +1,4 @@
-import { data,userData } from '../data/data.js';
+import { data, userData } from '../data/data.js';
 
 // Enable Disable Script
 function enableDisable(element) {
@@ -40,20 +40,25 @@ sectionOneObserver.observe(sectionOne);
 
 
 // Render top mixes
-const topMixesContainer = document.querySelector("#playsongslist");
-topMixesContainer.innerHTML = data.map((song, index) => {
 
-    return `<li id='${song.id}'>
-            <img src="../data/${song.thumbnail}">
-            <button type="button" id="songPlayBtn-${song.id}" class="btn me-3" >
-                <svg role="img" height="24" width="24" viewBox="0 0 24 24">
-                    <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-                </svg>
-            </button>
-            <span>${song.title}</span>
-            <p><br>${song.artist}</p>
-        </li>`;
-}).join('');
+const topMixesContainer = document.querySelector("#playsongslist");
+
+
+
+    topMixesContainer.innerHTML = data.map((song, index) => {
+
+        return `<li id='${song.id}'>
+                <img src="../data/${song.thumbnail}">
+                <button type="button" id="songPlayBtn-${song.id}" class="btn me-3" >
+                    <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                        <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                    </svg>
+                </button>
+                <span>${song.title}</span>
+                <p><br>${song.artist}</p>
+            </li>`;
+    }).join('');
+
 
 
 // const playPauseButton = document.getElementById('playPauseButton');
@@ -105,7 +110,7 @@ let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
 const musicaPlay1 = document.querySelector('.musicshow1');
 const musicaPlay2 = document.querySelector('.musicshow2');
-let cutpagelink = document.querySelector('.cutlink')
+let cutpagelink = document.querySelector('.cutlink');
 
 
 let curr_index = 0;
@@ -138,7 +143,7 @@ function playSong(songId) {
             downloadLink.setAttribute('href', `./data/${curr_song.file_location}`);
             downloadLink.setAttribute('download', `${curr_song.title}.mp3`);
         });
-        cutpagelink.setAttribute('href',`../pages/cut.html?id=${curr_song.id}`)
+        cutpagelink.setAttribute('href', `../pages/cut.html?id=${curr_song.id}`);
 
         playPauseIcon1.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" id="playPauseIcon" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M8 5V19M16 5V19" stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -330,40 +335,117 @@ let currId;
 let curr_user;
 
 
-const userName = document.querySelector('.username')
-document.addEventListener('DOMContentLoaded', function() {
+const userName = document.querySelector('.username');
+document.addEventListener('DOMContentLoaded', function () {
     // Get the value of the id parameter from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('userid');
     console.log(id);
     currId = parseInt(id); // Assign id to the global currId variable
-    
+
     // Find the current song based on the ID
     curr_user = userData.find(user => user.id === currId);
-    
+
     // Call function to load audio file and draw waveform if curr_song exists
     if (curr_user) {
-      userName.innerHTML = `${curr_user.name}`;
+        userName.innerHTML = `${curr_user.name}`;
     } else {
-       userName.innerHTML=`Guest`
+        userName.innerHTML = `Guest`;
     }
-  });
+});
 
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const dropdownButton = document.getElementById('dropdownMenuButton1');
     const dropdownContent = document.getElementById('dropdownMenuContent');
 
     // Add event listener to the dropdown button
-    dropdownButton.addEventListener('click', function() {
+    dropdownButton.addEventListener('click', function () {
         // Toggle the 'show' class on the dropdown content
         dropdownContent.classList.toggle('show');
     });
 
     // Close the dropdown menu when clicking outside of it
-    window.addEventListener('click', function(event) {
+    window.addEventListener('click', function (event) {
         if (!dropdownButton.contains(event.target)) {
             dropdownContent.classList.remove('show');
         }
     });
 });
+
+
+
+//search feature
+
+const searchinput = document.querySelector('.searchinput');
+
+const searchbtn = document.querySelector('.searchbtn');
+const searchplaylist = document.querySelector('.searchPlaylist');
+
+
+searchbtn.addEventListener('click', () => {
+
+    
+
+    const searchValue = searchinput.value;
+    if (searchValue!== ''){
+        const searchData = data.filter(song => {
+            // Assuming each song object has a 'title' property
+            return song.title.toLowerCase().includes(searchValue.toLowerCase());
+        });
+
+        console.log(searchValue);
+    console.log(searchData);
+
+    searchplaylist.innerHTML = `<h4 class="mb-3"><b>your search results</b></h4>
+    <br>
+    <br>
+    <ul class="playlists " id="searchsongslist">
+    <p style="text-align: center;">not found</p>
+    </ul>`;
+    const searchDatalist = document.querySelector('#searchsongslist');
+    if(searchData.length > 0){
+        searchDatalist.innerHTML = searchData.map((song) => {
+
+            return `<li id='${song.id}'>
+                    <img src="../data/${song.thumbnail}">
+                    
+                    <span>
+                        <h6>${song.title}</h6>
+                        <p>${song.artist}</p>
+                    </span>
+                    <button type="button" id="searchPlayBtn-${song.id}" class="btn " >
+                        <svg role="img" height="24" width="24" viewBox="0 0 24 24">
+                            <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
+                        </svg>
+                    </button>
+                    
+                    
+                </li>`;
+        }).join('');
+        searchData.forEach(song => {
+            document.getElementById(`searchPlayBtn-${song.id}`).addEventListener('click', () => playSong(song.id));
+        });
+        searchinput.value = '';
+
+    } else{
+        searchplaylist.innerHTML = `<h4 class="mb-3"><b>your search results</b></h4>
+        <br>
+        <br>
+        <ul class="playlists " id="searchsongslist">
+        <p style="text-align: center;">${searchValue }is not found</p>
+        </ul>`;
+        searchinput.value = '';
+    }
+    
+    
+    
+    }
+
+    
+
+    
+
+});
+
+
 
