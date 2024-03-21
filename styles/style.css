@@ -136,12 +136,10 @@ body,
 }
 
 #principal #feed {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    #121212 50%,
-    #121212 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 0%,
+      #121212 50%,
+      #121212 100%);
   overflow-y: auto;
 }
 
@@ -204,12 +202,10 @@ body,
 }
 
 #principal #feed #main {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 0%,
-    #121212 50%,
-    #121212 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0) 0%,
+      #121212 50%,
+      #121212 100%);
 }
 
 #principal #feed #main #feedHeader {
@@ -289,14 +285,16 @@ body,
 #principal #feed #main .feedPlaylist h4 {
   display: inline;
 }
-#principal #feed #main .feedPlaylist h4 > a {
+
+#principal #feed #main .feedPlaylist h4>a {
   text-decoration: none;
   color: #fff;
 }
 
-#principal #feed #main .feedPlaylist h4 > a:hover {
+#principal #feed #main .feedPlaylist h4>a:hover {
   text-decoration: underline;
 }
+
 #principal #feed #main .feedPlaylist .see-all {
   text-decoration: none;
   color: #b3b3b3;
@@ -309,12 +307,17 @@ body,
   text-decoration: underline;
 }
 
-#principal #feed #main .feedPlaylist .playlists {display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Use grid layout with flexible columns */
-  gap: 20px; /* Add gap between columns */
-  padding: 20px; /* Add padding around the playlists */
-  justify-content: center; /* Center align playlists */
-  
+#principal #feed #main .feedPlaylist .playlists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Use grid layout with flexible columns */
+  gap: 20px;
+  /* Add gap between columns */
+  padding: 20px;
+  /* Add padding around the playlists */
+  justify-content: center;
+  /* Center align playlists */
+
 }
 
 #principal #feed #main .feedPlaylist .playlists li {
@@ -325,7 +328,7 @@ body,
   cursor: pointer;
   transition: background-color 0.3s;
   position: relative;
-  
+
 }
 
 #principal #feed #main .feedPlaylist .playlists li img {
@@ -413,18 +416,21 @@ body,
     width: 100%;
   }
 }
+
 @media only screen and (max-width: 768px) {
   #principal #feed #main .feedPlaylist .playlists {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column size for smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Adjust column size for smaller screens */
   }
 }
 
 @media only screen and (max-width: 480px) {
   #principal #feed #main .feedPlaylist .playlists li {
-      padding: 10px; 
-      /* Decrease padding for smaller screens */
+    padding: 10px;
+    /* Decrease padding for smaller screens */
   }
 }
+
 @media only screen and (max-width: 996px) {
   #principal #feed #main .feedPlaylist .playlists {
     height: 295px;
@@ -570,6 +576,7 @@ body,
     margin: -9px;
     padding: 18px;
   }
+
   #principal #feed #main .feedPlaylist .playlists li {
     margin-bottom: 100px;
   }
@@ -760,7 +767,8 @@ body,
 
 /* Dropdown menu content styles */
 .dropdown-menu {
-  display: none; /* Initially hide the dropdown menu */
+  display: none;
+  /* Initially hide the dropdown menu */
   padding: 10px;
   padding-left: 15px;
   background-color: rgba(10, 10, 10, 0.4);
@@ -769,7 +777,8 @@ body,
   width: 254px;
   align-self: flex-end;
   position: absolute;
-  top: 30px; /* Position the dropdown menu below the button */
+  top: 30px;
+  /* Position the dropdown menu below the button */
 }
 
 /* Show the dropdown menu content when the 'show' class is added */
@@ -782,7 +791,8 @@ body,
   text-decoration: none;
   color: white;
 }
-.dropdown-item:hover{
+
+.dropdown-item:hover {
   background-color: #ffffff00;
   color: gray;
 }
@@ -791,4 +801,109 @@ body,
 #user_bttn {
   display: flex;
   flex-direction: column;
+}
+
+
+.searchinput {
+  border-radius: 25px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  
+  border: none;
+
+
+}
+
+.searchbtn {
+  border-radius: 25px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 1px solid white;
+  background-color: rgb(238, 238, 238);
+  border-left: none;
+}
+.searchbtn:hover{
+
+  background-color: rgb(228, 228, 228);
+}
+.searchbtn:active{
+
+  background-color: rgb(209, 209, 209);
+}
+.searchinput:focus{
+  border: none;
+  box-shadow: none;
+}
+
+/* Style for search results section */
+.searchPlaylist  {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Style for search results heading */
+.searchplaylist h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Style for the list of search results */
+#searchsongslist {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* Style for each search result item */
+#searchsongslist li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  
+  width: 200px;
+  min-height: 300px;
+  padding: 1rem;
+  border-radius: 5px;
+  gap: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Style for the thumbnail image */
+#searchsongslist li img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  height: 200px;
+  
+ 
+}
+
+
+/* Style for the play button */
+#searchsongslist li button {
+  width: 100%;
+ margin-top: 5px;
+  background-color: #1ed760;
+  
+}
+
+/* Style for the song title */
+#searchsongslist li span {
+  font-weight: bold;
+  align-self: flex-start;
+  margin-top: 10px;
+  
+
+}
+
+/* Style for the artist name */
+#searchsongslist li p {
+  margin: 0;
+  color: #666;
+  padding: 0;
 }
