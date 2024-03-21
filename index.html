@@ -46,7 +46,7 @@
               </svg> Home</a>
           </li>
           <li class="nav-item">
-            <a href="search.html" class="nav-link"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
+            <a id="navSearch"  class="nav-link"><svg role="img" height="24" width="24" viewBox="0 0 24 24">
                 <path
                   d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z">
                 </path>
@@ -79,9 +79,15 @@
       <div id="feed" class="w-100">
 
         <!-- menu superior do conteudo -->
-        <nav id="topNav" class="d-flex justify-content-end align-items-center px-4 py-2">
+        <nav id="topNav" class="d-flex justify-content-between align-items-center px-4 py-2">
 
-
+          <!-- Start of search bar -->
+          <div class="d-flex" role="search">
+            <input class="form-control searchinput" type="search" placeholder="Search" aria-label="Search" >
+            <button  class="btn searchbtn"  type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" fill="none">
+              <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></span></button>
+            </div>
 
           <div id="btnTopNav" class="d-flex">
 
@@ -117,9 +123,9 @@
 
             <!-- start of greeting -->
             <h2 class="fw-bold" id="greeting">wellcome back</h2>
-            <!-- end of greeting -->
-
-            <!-- recent playlists -->
+            <section class="searchPlaylist ">
+              
+            </section>
 
           </section>
 
